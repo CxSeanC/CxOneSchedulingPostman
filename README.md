@@ -24,7 +24,7 @@ Ensure these variables are set up in a Postman environment before executing the 
 
 ## Authentication Process
 
-This API uses OAuth 2.0 for authentication. The access token is obtained via the "Get Bearer Token" request in the collection.
+This API uses OAuth 2.0 for authentication. Make sure you enable sufficient writes for the OAuth connection. The access token is obtained via the "Get Bearer Token" request in the collection.
 
 ### Steps to Authenticate:
 1. Run the **Get Bearer Token** request in Postman.
