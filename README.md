@@ -14,7 +14,7 @@ The following environment variables should be configured in Postman:
 
 | Variable       | Description |
 |---------------|-------------|
-| `base_url`    | The base URL of the API (e.g., `https://api.example.com`) |
+| `base_url`    | The base URL of the API (e.g., `https://us.ast.checkmarx.net/api`) |
 | `client_id`   | OAuth 2.0 Client ID |
 | `client_secret` | OAuth 2.0 Client Secret |
 | `access_token` | Auto-populated Bearer Token after authentication |
