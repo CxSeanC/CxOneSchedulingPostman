@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "379f9fde-3db1-4906-9037-88eedfa44053",
+		"_postman_id": "e72fd825-8aee-44c0-af3d-92b0f585ee76",
 		"name": "Schedules API",
 		"description": "Postman collection generated from the Schedules Swagger spec",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -128,7 +128,15 @@
 					}
 				],
 				"url": {
-					"raw": ""
+					"raw": "{{Cx1_URL}}/projects/schedules/{{id}}",
+					"host": [
+						"{{Cx1_URL}}"
+					],
+					"path": [
+						"projects",
+						"schedules",
+						"{{id}}"
+					]
 				},
 				"description": "Get the schedule for a specific project. Requires permission `view-schedule-scan`."
 			},
@@ -141,7 +149,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer {{token}}",
+						"value": "Bearer {{access_token}}",
 						"description": "JWT access token"
 					},
 					{
@@ -156,7 +164,15 @@
 					}
 				],
 				"url": {
-					"raw": ""
+					"raw": "{{Cx1_URL}}/projects/schedules/{{id}}",
+					"host": [
+						"{{Cx1_URL}}"
+					],
+					"path": [
+						"projects",
+						"schedules",
+						"{{id}}"
+					]
 				},
 				"description": "Delete the scan schedule for the specified project. Requires permission `delete-schedule-scan`."
 			},
@@ -192,7 +208,15 @@
 					"raw": "{\n  \"start_time\": \"12:05\",\n  \"frequency\": \"daily\",\n  \"engines\": [\n    \"sast\"\n  ],\n  \"branch\": \"master\",\n  \"tags\": {\n    \"version\": \"initial\",\n    \"priority\": \"high\"\n  }\n}"
 				},
 				"url": {
-					"raw": ""
+					"raw": "{{Cx1_URL}}/projects/schedules/{{id}}",
+					"host": [
+						"{{Cx1_URL}}"
+					],
+					"path": [
+						"projects",
+						"schedules",
+						"{{id}}"
+					]
 				},
 				"description": "Create a schedule for scanning a project. Requires permission `create-schedule-scan`."
 			},
@@ -228,25 +252,39 @@
 					"raw": "{\n  \"start_time\": \"14:00\",\n  \"frequency\": \"daily\",\n  \"days\": [\n    \"monday\",\n    \"wednesday\"\n  ],\n  \"engines\": [\n    \"sast\"\n  ],\n  \"branch\": \"master\",\n  \"tags\": {\n    \"priority\": \"high\"\n  },\n  \"active\": false\n}"
 				},
 				"url": {
-					"raw": ""
+					"raw": "{{Cx1_URL}}/projects/schedules/{{id}}",
+					"host": [
+						"{{Cx1_URL}}"
+					],
+					"path": [
+						"projects",
+						"schedules",
+						"{{id}}"
+					]
 				},
 				"description": "Update the scan schedule for a specific project. Requires permission `update-schedule-scan`."
 			},
 			"response": []
 		}
 	],
-	"variable": [
+	"event": [
 		{
-			"key": "baseUrl",
-			"value": "https://ast.checkmarx.net/api/projects/schedules"
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		},
 		{
-			"key": "token",
-			"value": "your_jwt_token_here"
-		},
-		{
-			"key": "id",
-			"value": "replace_with_project_id"
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
 	]
 }
